@@ -1,5 +1,3 @@
-import 'package:meta/meta.dart';
-
 abstract class MediaFormat {
   /// The [name] of the [MediaFormat].
   /// The [name] MUST be of the form container/codec (not all lower case)

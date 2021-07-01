@@ -5,13 +5,13 @@ documentation: https://github.com/bsutton/sounds_common/wiki
 description: A shared library for the sounds and sounds_codec packages. Provides MediaFormat, Track and small set of utility functions.
 repository: https://github.com/bsutton/sounds_common
 environment: 
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.13.0 <3.0.0"
 dependencies: 
   intl: ^0.17.0
-  logger: '>=0.7.0+2 <1.0.0'
+  logger: ^1.0.0
   meta: ^1.3.0
   path: ^1.8.0
-  uuid: ^2.0.4
+  uuid: ^3.0.4
   flutter: 
     sdk: flutter
 dev_dependencies: 

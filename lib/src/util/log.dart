@@ -7,7 +7,7 @@ import 'stack_trace_impl.dart';
 
 /// Logging class
 class Log extends Logger {
-  static late Log _self;
+  static Log? _self;
   static late String _localPath;
 
   /// The default log level.
@@ -17,49 +17,49 @@ class Log extends Logger {
       : super(printer: MyLogPrinter(currentWorkingDirectory));
 
   ///
-  void debug(String message, {dynamic? error, StackTrace? stackTrace}) {
+  void debug(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
     Log.d(message, error: error, stackTrace: stackTrace);
   }
 
   ///
-  void info(String message, {dynamic? error, StackTrace? stackTrace}) {
+  void info(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
     Log.i(message, error: error, stackTrace: stackTrace);
   }
 
   ///
-  void warn(String message, {dynamic? error, StackTrace? stackTrace}) {
+  void warn(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
     Log.w(message, error: error, stackTrace: stackTrace);
   }
 
   ///
-  void error(String message, {dynamic? error, StackTrace? stackTrace}) {
+  void error(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
     Log.e(message, error: error, stackTrace: stackTrace);
   }
 
   ///
   void color(String message, AnsiColor color,
-      {dynamic? error, StackTrace? stackTrace}) {
+      {dynamic error, StackTrace? stackTrace}) {
     autoInit();
     Log.i(color.apply(message), error: error, stackTrace: stackTrace);
   }
 
   ///
   factory Log.color(String message, AnsiColor color,
-      {dynamic? error, StackTrace? stackTrace}) {
+      {dynamic error, StackTrace? stackTrace}) {
     autoInit();
-    _self.d(color.apply(message), error, stackTrace);
-    return _self;
+    _self!.d(color.apply(message), error, stackTrace);
+    return _self!;
   }
 
   static final _recentLogs = <String, DateTime>{};
 
   ///
   factory Log.d(String message,
-      {dynamic? error,
+      {dynamic error,
       StackTrace? stackTrace,
       bool supressDuplicates = false}) {
     autoInit();
@@ -73,29 +73,29 @@ class Log extends Logger {
       }
       _recentLogs[message] = DateTime.now();
     }
-    if (!suppress) _self.d(message, error, stackTrace);
-    return _self;
+    if (!suppress) _self!.d(message, error, stackTrace);
+    return _self!;
   }
 
   ///
-  factory Log.i(String message, {dynamic? error, StackTrace? stackTrace}) {
+  factory Log.i(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
-    _self.i(message, error, stackTrace);
-    return _self;
+    _self!.i(message, error, stackTrace);
+    return _self!;
   }
 
   ///
-  factory Log.w(String message, {dynamic? error, StackTrace? stackTrace}) {
+  factory Log.w(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
-    _self.w(message, error, stackTrace);
-    return _self;
+    _self!.w(message, error, stackTrace);
+    return _self!;
   }
 
   ///
-  factory Log.e(String message, {dynamic? error, StackTrace? stackTrace}) {
+  factory Log.e(String message, {dynamic error, StackTrace? stackTrace}) {
     autoInit();
-    _self.e(message, error, stackTrace);
-    return _self;
+    _self!.e(message, error, stackTrace);
+    return _self!;
   }
 
   ///

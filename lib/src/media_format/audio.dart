@@ -19,7 +19,7 @@ import 'media_format.dart';
 class Audio {
   final List<TempMediaFile> _tempMediaFiles = [];
 
-  TrackStorageType _storageType;
+  final TrackStorageType _storageType;
 
   ///
   MediaFormat? mediaFormat;
@@ -83,7 +83,7 @@ class Audio {
     }
 
     if (isURL) {
-      TempMediaFile tempMediaFile = TempMediaFile.empty();
+      var tempMediaFile = TempMediaFile.empty();
       try {
         await Downloader.download(url!, tempMediaFile.path,
             progress: (disposition) {});

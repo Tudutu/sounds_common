@@ -32,7 +32,7 @@ import 'log.dart';
 /// ```
 class StopWatch {
   final core.Stopwatch _stopWatch = core.Stopwatch();
-  String _description;
+  final String _description;
 
   /// create a stop watch to time between two code points.
   StopWatch(this._description) {
@@ -46,7 +46,7 @@ class StopWatch {
   /// stop the stop watch and print out the duration.
   void end({bool log = true}) {
     _stopWatch.stop();
-    _description ??= '';
+    // _description ??= '';
     if (log) {
       Log.d(
         'Elapsed ${_stopWatch.elapsedMilliseconds} ms for $_description',

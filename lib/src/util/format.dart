@@ -33,9 +33,9 @@ class Format {
   ///
   ///
   static String duration(Duration duration, {bool showSuffix = true}) {
-    if (duration == null) {
-      return '';
-    }
+    // if (duration == null) {
+    //   return '';
+    // }
 
     if (duration.inHours >= 1) {
       // h:mm
@@ -58,9 +58,9 @@ class Format {
   ///
   static String dateTime(DateTime date,
       [String pattern = 'yyyy/MM/dd h:ss a']) {
-    if (date == null) {
-      return '';
-    }
+    // if (date == null) {
+    //   return '';
+    // }
     return DateFormat(pattern).format(date);
   }
 
@@ -86,9 +86,9 @@ class Format {
   ///
   static String smartFormat(DateTime date,
       [String pattern = 'yyyy/MM/dd h:ss a']) {
-    if (date == null) {
-      return '';
-    }
+    // if (date == null) {
+    //   return '';
+    // }
     return DateFormat(pattern).format(date);
   }
 

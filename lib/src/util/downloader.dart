@@ -46,7 +46,7 @@ class Downloader {
 
           /// we have new data to save.
           await raf.writeFrom(newBytes);
-          subscription!.resume();
+          subscription.resume();
           lengthReceived += newBytes.length;
 
           /// notify the world of our progress

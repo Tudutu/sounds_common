@@ -14,8 +14,6 @@
  *   along with Sounds.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import 'package:meta/meta.dart';
-
 /// Callback function used by internal methods indicate the loading progress.
 /// The value of [progress] should be between [0.0 - 1.0].
 /// The [length] of the media in bytes that we are downloading.

@@ -52,7 +52,7 @@ class FileUtil {
   /// Return the file extension for the given path.
   /// path can be null. We return null in this case.
   String fileExtension(String path) {
-    return path ?? extension(path);
+    return extension(path);
   }
 
   /// Checks if the given path exists.

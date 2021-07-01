@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:typed_data';
 
-import 'package:meta/meta.dart';
-
 import '../sounds_common.dart';
 import 'media_format/audio.dart';
 import 'playback_disposition.dart';
